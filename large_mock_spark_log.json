@@ -1,0 +1,1250 @@
+{
+    "stages": [
+        {
+            "stageId": 1,
+            "numPartitions": 26,
+            "partitionData": [
+                {
+                    "key": "d",
+                    "value": 110
+                },
+                {
+                    "key": "c",
+                    "value": 74
+                },
+                {
+                    "key": "e",
+                    "value": 54
+                },
+                {
+                    "key": "b",
+                    "value": 109
+                },
+                {
+                    "key": "e",
+                    "value": 129
+                },
+                {
+                    "key": "f",
+                    "value": 54
+                },
+                {
+                    "key": "a",
+                    "value": 105
+                },
+                {
+                    "key": "a",
+                    "value": 119
+                },
+                {
+                    "key": "f",
+                    "value": 109
+                },
+                {
+                    "key": "e",
+                    "value": 55
+                },
+                {
+                    "key": "b",
+                    "value": 81
+                },
+                {
+                    "key": "a",
+                    "value": 130
+                },
+                {
+                    "key": "c",
+                    "value": 118
+                },
+                {
+                    "key": "a",
+                    "value": 79
+                },
+                {
+                    "key": "f",
+                    "value": 76
+                },
+                {
+                    "key": "e",
+                    "value": 148
+                },
+                {
+                    "key": "e",
+                    "value": 71
+                },
+                {
+                    "key": "c",
+                    "value": 51
+                },
+                {
+                    "key": "a",
+                    "value": 102
+                },
+                {
+                    "key": "c",
+                    "value": 121
+                },
+                {
+                    "key": "f",
+                    "value": 92
+                },
+                {
+                    "key": "c",
+                    "value": 102
+                },
+                {
+                    "key": "d",
+                    "value": 93
+                },
+                {
+                    "key": "f",
+                    "value": 115
+                },
+                {
+                    "key": "a",
+                    "value": 105
+                },
+                {
+                    "key": "c",
+                    "value": 64
+                }
+            ]
+        },
+        {
+            "stageId": 2,
+            "numPartitions": 27,
+            "partitionData": [
+                {
+                    "key": "c",
+                    "value": 52
+                },
+                {
+                    "key": "f",
+                    "value": 61
+                },
+                {
+                    "key": "f",
+                    "value": 76
+                },
+                {
+                    "key": "b",
+                    "value": 144
+                },
+                {
+                    "key": "f",
+                    "value": 96
+                },
+                {
+                    "key": "f",
+                    "value": 81
+                },
+                {
+                    "key": "a",
+                    "value": 53
+                },
+                {
+                    "key": "d",
+                    "value": 90
+                },
+                {
+                    "key": "f",
+                    "value": 53
+                },
+                {
+                    "key": "b",
+                    "value": 146
+                },
+                {
+                    "key": "f",
+                    "value": 129
+                },
+                {
+                    "key": "d",
+                    "value": 110
+                },
+                {
+                    "key": "e",
+                    "value": 108
+                },
+                {
+                    "key": "d",
+                    "value": 55
+                },
+                {
+                    "key": "e",
+                    "value": 85
+                },
+                {
+                    "key": "a",
+                    "value": 149
+                },
+                {
+                    "key": "d",
+                    "value": 125
+                },
+                {
+                    "key": "b",
+                    "value": 81
+                },
+                {
+                    "key": "b",
+                    "value": 106
+                },
+                {
+                    "key": "e",
+                    "value": 132
+                },
+                {
+                    "key": "b",
+                    "value": 71
+                },
+                {
+                    "key": "e",
+                    "value": 94
+                },
+                {
+                    "key": "a",
+                    "value": 141
+                },
+                {
+                    "key": "f",
+                    "value": 94
+                },
+                {
+                    "key": "b",
+                    "value": 87
+                },
+                {
+                    "key": "d",
+                    "value": 113
+                },
+                {
+                    "key": "d",
+                    "value": 98
+                }
+            ]
+        },
+        {
+            "stageId": 3,
+            "numPartitions": 23,
+            "partitionData": [
+                {
+                    "key": "b",
+                    "value": 115
+                },
+                {
+                    "key": "f",
+                    "value": 142
+                },
+                {
+                    "key": "a",
+                    "value": 123
+                },
+                {
+                    "key": "b",
+                    "value": 123
+                },
+                {
+                    "key": "f",
+                    "value": 55
+                },
+                {
+                    "key": "c",
+                    "value": 143
+                },
+                {
+                    "key": "c",
+                    "value": 100
+                },
+                {
+                    "key": "e",
+                    "value": 117
+                },
+                {
+                    "key": "b",
+                    "value": 138
+                },
+                {
+                    "key": "b",
+                    "value": 109
+                },
+                {
+                    "key": "b",
+                    "value": 109
+                },
+                {
+                    "key": "a",
+                    "value": 79
+                },
+                {
+                    "key": "f",
+                    "value": 89
+                },
+                {
+                    "key": "c",
+                    "value": 51
+                },
+                {
+                    "key": "c",
+                    "value": 62
+                },
+                {
+                    "key": "b",
+                    "value": 62
+                },
+                {
+                    "key": "a",
+                    "value": 105
+                },
+                {
+                    "key": "c",
+                    "value": 93
+                },
+                {
+                    "key": "a",
+                    "value": 114
+                },
+                {
+                    "key": "f",
+                    "value": 108
+                },
+                {
+                    "key": "a",
+                    "value": 87
+                },
+                {
+                    "key": "a",
+                    "value": 69
+                },
+                {
+                    "key": "a",
+                    "value": 82
+                }
+            ]
+        },
+        {
+            "stageId": 4,
+            "numPartitions": 13,
+            "partitionData": [
+                {
+                    "key": "f",
+                    "value": 115
+                },
+                {
+                    "key": "e",
+                    "value": 103
+                },
+                {
+                    "key": "c",
+                    "value": 138
+                },
+                {
+                    "key": "e",
+                    "value": 110
+                },
+                {
+                    "key": "c",
+                    "value": 149
+                },
+                {
+                    "key": "e",
+                    "value": 79
+                },
+                {
+                    "key": "d",
+                    "value": 129
+                },
+                {
+                    "key": "f",
+                    "value": 140
+                },
+                {
+                    "key": "c",
+                    "value": 66
+                },
+                {
+                    "key": "d",
+                    "value": 107
+                },
+                {
+                    "key": "a",
+                    "value": 97
+                },
+                {
+                    "key": "a",
+                    "value": 121
+                },
+                {
+                    "key": "d",
+                    "value": 109
+                }
+            ]
+        },
+        {
+            "stageId": 5,
+            "numPartitions": 20,
+            "partitionData": [
+                {
+                    "key": "a",
+                    "value": 103
+                },
+                {
+                    "key": "d",
+                    "value": 100
+                },
+                {
+                    "key": "d",
+                    "value": 75
+                },
+                {
+                    "key": "d",
+                    "value": 124
+                },
+                {
+                    "key": "d",
+                    "value": 101
+                },
+                {
+                    "key": "e",
+                    "value": 88
+                },
+                {
+                    "key": "d",
+                    "value": 75
+                },
+                {
+                    "key": "a",
+                    "value": 69
+                },
+                {
+                    "key": "b",
+                    "value": 97
+                },
+                {
+                    "key": "e",
+                    "value": 67
+                },
+                {
+                    "key": "b",
+                    "value": 85
+                },
+                {
+                    "key": "f",
+                    "value": 124
+                },
+                {
+                    "key": "b",
+                    "value": 98
+                },
+                {
+                    "key": "c",
+                    "value": 112
+                },
+                {
+                    "key": "a",
+                    "value": 146
+                },
+                {
+                    "key": "d",
+                    "value": 85
+                },
+                {
+                    "key": "d",
+                    "value": 116
+                },
+                {
+                    "key": "e",
+                    "value": 134
+                },
+                {
+                    "key": "f",
+                    "value": 115
+                },
+                {
+                    "key": "d",
+                    "value": 105
+                }
+            ]
+        },
+        {
+            "stageId": 6,
+            "numPartitions": 23,
+            "partitionData": [
+                {
+                    "key": "d",
+                    "value": 136
+                },
+                {
+                    "key": "e",
+                    "value": 140
+                },
+                {
+                    "key": "c",
+                    "value": 65
+                },
+                {
+                    "key": "b",
+                    "value": 141
+                },
+                {
+                    "key": "b",
+                    "value": 105
+                },
+                {
+                    "key": "b",
+                    "value": 105
+                },
+                {
+                    "key": "b",
+                    "value": 97
+                },
+                {
+                    "key": "e",
+                    "value": 106
+                },
+                {
+                    "key": "a",
+                    "value": 86
+                },
+                {
+                    "key": "f",
+                    "value": 77
+                },
+                {
+                    "key": "f",
+                    "value": 121
+                },
+                {
+                    "key": "f",
+                    "value": 71
+                },
+                {
+                    "key": "a",
+                    "value": 92
+                },
+                {
+                    "key": "b",
+                    "value": 143
+                },
+                {
+                    "key": "e",
+                    "value": 126
+                },
+                {
+                    "key": "a",
+                    "value": 105
+                },
+                {
+                    "key": "a",
+                    "value": 95
+                },
+                {
+                    "key": "d",
+                    "value": 149
+                },
+                {
+                    "key": "c",
+                    "value": 150
+                },
+                {
+                    "key": "a",
+                    "value": 94
+                },
+                {
+                    "key": "a",
+                    "value": 60
+                },
+                {
+                    "key": "e",
+                    "value": 134
+                },
+                {
+                    "key": "f",
+                    "value": 58
+                }
+            ]
+        },
+        {
+            "stageId": 7,
+            "numPartitions": 27,
+            "partitionData": [
+                {
+                    "key": "a",
+                    "value": 86
+                },
+                {
+                    "key": "b",
+                    "value": 58
+                },
+                {
+                    "key": "a",
+                    "value": 79
+                },
+                {
+                    "key": "a",
+                    "value": 119
+                },
+                {
+                    "key": "b",
+                    "value": 98
+                },
+                {
+                    "key": "e",
+                    "value": 112
+                },
+                {
+                    "key": "b",
+                    "value": 127
+                },
+                {
+                    "key": "f",
+                    "value": 117
+                },
+                {
+                    "key": "d",
+                    "value": 149
+                },
+                {
+                    "key": "e",
+                    "value": 114
+                },
+                {
+                    "key": "c",
+                    "value": 88
+                },
+                {
+                    "key": "f",
+                    "value": 86
+                },
+                {
+                    "key": "a",
+                    "value": 122
+                },
+                {
+                    "key": "e",
+                    "value": 139
+                },
+                {
+                    "key": "a",
+                    "value": 133
+                },
+                {
+                    "key": "d",
+                    "value": 50
+                },
+                {
+                    "key": "c",
+                    "value": 85
+                },
+                {
+                    "key": "a",
+                    "value": 69
+                },
+                {
+                    "key": "a",
+                    "value": 62
+                },
+                {
+                    "key": "f",
+                    "value": 115
+                },
+                {
+                    "key": "d",
+                    "value": 60
+                },
+                {
+                    "key": "d",
+                    "value": 66
+                },
+                {
+                    "key": "f",
+                    "value": 89
+                },
+                {
+                    "key": "a",
+                    "value": 139
+                },
+                {
+                    "key": "d",
+                    "value": 75
+                },
+                {
+                    "key": "e",
+                    "value": 128
+                },
+                {
+                    "key": "f",
+                    "value": 126
+                }
+            ]
+        },
+        {
+            "stageId": 8,
+            "numPartitions": 12,
+            "partitionData": [
+                {
+                    "key": "e",
+                    "value": 52
+                },
+                {
+                    "key": "a",
+                    "value": 97
+                },
+                {
+                    "key": "b",
+                    "value": 75
+                },
+                {
+                    "key": "d",
+                    "value": 74
+                },
+                {
+                    "key": "c",
+                    "value": 147
+                },
+                {
+                    "key": "b",
+                    "value": 140
+                },
+                {
+                    "key": "f",
+                    "value": 73
+                },
+                {
+                    "key": "a",
+                    "value": 120
+                },
+                {
+                    "key": "d",
+                    "value": 135
+                },
+                {
+                    "key": "b",
+                    "value": 117
+                },
+                {
+                    "key": "d",
+                    "value": 116
+                },
+                {
+                    "key": "c",
+                    "value": 58
+                }
+            ]
+        },
+        {
+            "stageId": 9,
+            "numPartitions": 7,
+            "partitionData": [
+                {
+                    "key": "a",
+                    "value": 111
+                },
+                {
+                    "key": "f",
+                    "value": 144
+                },
+                {
+                    "key": "e",
+                    "value": 119
+                },
+                {
+                    "key": "a",
+                    "value": 131
+                },
+                {
+                    "key": "e",
+                    "value": 105
+                },
+                {
+                    "key": "c",
+                    "value": 94
+                },
+                {
+                    "key": "a",
+                    "value": 66
+                }
+            ]
+        },
+        {
+            "stageId": 10,
+            "numPartitions": 14,
+            "partitionData": [
+                {
+                    "key": "b",
+                    "value": 56
+                },
+                {
+                    "key": "c",
+                    "value": 122
+                },
+                {
+                    "key": "c",
+                    "value": 144
+                },
+                {
+                    "key": "b",
+                    "value": 129
+                },
+                {
+                    "key": "e",
+                    "value": 123
+                },
+                {
+                    "key": "f",
+                    "value": 90
+                },
+                {
+                    "key": "e",
+                    "value": 87
+                },
+                {
+                    "key": "b",
+                    "value": 127
+                },
+                {
+                    "key": "a",
+                    "value": 104
+                },
+                {
+                    "key": "a",
+                    "value": 62
+                },
+                {
+                    "key": "a",
+                    "value": 104
+                },
+                {
+                    "key": "d",
+                    "value": 64
+                },
+                {
+                    "key": "d",
+                    "value": 115
+                },
+                {
+                    "key": "c",
+                    "value": 127
+                }
+            ]
+        },
+        {
+            "stageId": 11,
+            "numPartitions": 29,
+            "partitionData": [
+                {
+                    "key": "e",
+                    "value": 142
+                },
+                {
+                    "key": "d",
+                    "value": 98
+                },
+                {
+                    "key": "c",
+                    "value": 57
+                },
+                {
+                    "key": "e",
+                    "value": 139
+                },
+                {
+                    "key": "c",
+                    "value": 96
+                },
+                {
+                    "key": "b",
+                    "value": 147
+                },
+                {
+                    "key": "f",
+                    "value": 53
+                },
+                {
+                    "key": "e",
+                    "value": 87
+                },
+                {
+                    "key": "b",
+                    "value": 93
+                },
+                {
+                    "key": "d",
+                    "value": 126
+                },
+                {
+                    "key": "d",
+                    "value": 65
+                },
+                {
+                    "key": "d",
+                    "value": 95
+                },
+                {
+                    "key": "d",
+                    "value": 108
+                },
+                {
+                    "key": "f",
+                    "value": 148
+                },
+                {
+                    "key": "e",
+                    "value": 128
+                },
+                {
+                    "key": "d",
+                    "value": 101
+                },
+                {
+                    "key": "b",
+                    "value": 83
+                },
+                {
+                    "key": "a",
+                    "value": 88
+                },
+                {
+                    "key": "d",
+                    "value": 127
+                },
+                {
+                    "key": "c",
+                    "value": 122
+                },
+                {
+                    "key": "f",
+                    "value": 113
+                },
+                {
+                    "key": "d",
+                    "value": 76
+                },
+                {
+                    "key": "d",
+                    "value": 123
+                },
+                {
+                    "key": "a",
+                    "value": 134
+                },
+                {
+                    "key": "c",
+                    "value": 79
+                },
+                {
+                    "key": "b",
+                    "value": 118
+                },
+                {
+                    "key": "d",
+                    "value": 101
+                },
+                {
+                    "key": "a",
+                    "value": 75
+                },
+                {
+                    "key": "e",
+                    "value": 76
+                }
+            ]
+        },
+        {
+            "stageId": 12,
+            "numPartitions": 10,
+            "partitionData": [
+                {
+                    "key": "c",
+                    "value": 131
+                },
+                {
+                    "key": "b",
+                    "value": 73
+                },
+                {
+                    "key": "e",
+                    "value": 111
+                },
+                {
+                    "key": "a",
+                    "value": 107
+                },
+                {
+                    "key": "e",
+                    "value": 126
+                },
+                {
+                    "key": "f",
+                    "value": 73
+                },
+                {
+                    "key": "f",
+                    "value": 101
+                },
+                {
+                    "key": "d",
+                    "value": 65
+                },
+                {
+                    "key": "f",
+                    "value": 104
+                },
+                {
+                    "key": "f",
+                    "value": 95
+                }
+            ]
+        },
+        {
+            "stageId": 13,
+            "numPartitions": 13,
+            "partitionData": [
+                {
+                    "key": "b",
+                    "value": 80
+                },
+                {
+                    "key": "d",
+                    "value": 77
+                },
+                {
+                    "key": "d",
+                    "value": 84
+                },
+                {
+                    "key": "a",
+                    "value": 130
+                },
+                {
+                    "key": "b",
+                    "value": 116
+                },
+                {
+                    "key": "b",
+                    "value": 146
+                },
+                {
+                    "key": "b",
+                    "value": 148
+                },
+                {
+                    "key": "f",
+                    "value": 136
+                },
+                {
+                    "key": "d",
+                    "value": 149
+                },
+                {
+                    "key": "d",
+                    "value": 71
+                },
+                {
+                    "key": "c",
+                    "value": 102
+                },
+                {
+                    "key": "c",
+                    "value": 115
+                },
+                {
+                    "key": "e",
+                    "value": 150
+                }
+            ]
+        },
+        {
+            "stageId": 14,
+            "numPartitions": 26,
+            "partitionData": [
+                {
+                    "key": "f",
+                    "value": 141
+                },
+                {
+                    "key": "d",
+                    "value": 127
+                },
+                {
+                    "key": "c",
+                    "value": 90
+                },
+                {
+                    "key": "c",
+                    "value": 130
+                },
+                {
+                    "key": "e",
+                    "value": 63
+                },
+                {
+                    "key": "f",
+                    "value": 67
+                },
+                {
+                    "key": "d",
+                    "value": 99
+                },
+                {
+                    "key": "c",
+                    "value": 76
+                },
+                {
+                    "key": "e",
+                    "value": 106
+                },
+                {
+                    "key": "a",
+                    "value": 138
+                },
+                {
+                    "key": "b",
+                    "value": 145
+                },
+                {
+                    "key": "e",
+                    "value": 67
+                },
+                {
+                    "key": "f",
+                    "value": 101
+                },
+                {
+                    "key": "f",
+                    "value": 121
+                },
+                {
+                    "key": "e",
+                    "value": 150
+                },
+                {
+                    "key": "c",
+                    "value": 62
+                },
+                {
+                    "key": "a",
+                    "value": 102
+                },
+                {
+                    "key": "c",
+                    "value": 82
+                },
+                {
+                    "key": "b",
+                    "value": 90
+                },
+                {
+                    "key": "d",
+                    "value": 149
+                },
+                {
+                    "key": "b",
+                    "value": 80
+                },
+                {
+                    "key": "c",
+                    "value": 113
+                },
+                {
+                    "key": "d",
+                    "value": 129
+                },
+                {
+                    "key": "f",
+                    "value": 132
+                },
+                {
+                    "key": "b",
+                    "value": 128
+                },
+                {
+                    "key": "b",
+                    "value": 109
+                }
+            ]
+        },
+        {
+            "stageId": 15,
+            "numPartitions": 19,
+            "partitionData": [
+                {
+                    "key": "d",
+                    "value": 104
+                },
+                {
+                    "key": "d",
+                    "value": 122
+                },
+                {
+                    "key": "a",
+                    "value": 116
+                },
+                {
+                    "key": "d",
+                    "value": 146
+                },
+                {
+                    "key": "b",
+                    "value": 145
+                },
+                {
+                    "key": "e",
+                    "value": 125
+                },
+                {
+                    "key": "f",
+                    "value": 133
+                },
+                {
+                    "key": "d",
+                    "value": 148
+                },
+                {
+                    "key": "e",
+                    "value": 84
+                },
+                {
+                    "key": "e",
+                    "value": 60
+                },
+                {
+                    "key": "b",
+                    "value": 75
+                },
+                {
+                    "key": "c",
+                    "value": 138
+                },
+                {
+                    "key": "f",
+                    "value": 141
+                },
+                {
+                    "key": "f",
+                    "value": 72
+                },
+                {
+                    "key": "a",
+                    "value": 142
+                },
+                {
+                    "key": "c",
+                    "value": 121
+                },
+                {
+                    "key": "d",
+                    "value": 62
+                },
+                {
+                    "key": "f",
+                    "value": 59
+                },
+                {
+                    "key": "b",
+                    "value": 98
+                }
+            ]
+        }
+    ]
+}
