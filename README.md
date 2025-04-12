@@ -38,6 +38,9 @@ In distributed systems like Spark, **data skew** causes some partitions to be ov
 > _(Add screenshots or a GIF of your app here)_
 
 ---
+![Screenshot_12-4-2025_19555_opulent-cod-4vqvq664vg2jqp6-8507 app github dev](https://github.com/user-attachments/assets/de443c58-408a-44c6-98f8-109b1e46707c)
+
+![Screenshot 2025-04-12 195523](https://github.com/user-attachments/assets/28d4b948-e824-4960-bb9e-0e26fd6d395e)
 
 ## 🧪 Sample Log Format (JSON)
 
