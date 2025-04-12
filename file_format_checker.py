@@ -1,87 +1,76 @@
 import json
 import pandas as pd
 import streamlit as st
-
+import io
 # CSV file check
-def check_csv(file):
-    required_columns = {'numPartitions', 'partitionData', 'stageId'}
-    file_columns = set(file.columns)
-    
-    missing_columns = required_columns - file_columns
-    if missing_columns:
-        st.error(f"CSV is missing one or more required columns: {missing_columns}")
-        st.info("""
-            **Suggestions for Correct File Format (CSV):**
-            - Ensure the CSV file contains the following columns: 
-              - `numPartitions`: Number of partitions in the Spark job.
-              - `partitionData`: Data corresponding to each partition.
-              - `stageId`: The ID of the Spark stage.
-            
-            **Example CSV Format:**
-            ```
-            stageId,numPartitions,partitionData
-            1,10,[{"key": "A", "value": 100}, {"key": "B", "value": 200}]
-            2,15,[{"key": "A", "value": 300}, {"key": "C", "value": 150}]
-            ```
-        """)
+def check_csv(file) -> bool:
+    try:
+        file.seek(0)
+        decoded = file.read().decode("utf-8")
+        df = pd.read_csv(io.StringIO(decoded), quoting=csv.QUOTE_MINIMAL)
+        required = {"stageId", "numPartitions", "partitionData"}
+        return required.issubset(set(df.columns))
+    except Exception as e:
+        st.error(f"CSV check failed: {e}")
         return False
-    return True
+
 
 # JSON file check
 def check_json(file):
     required_keys = {'numPartitions', 'partitionData', 'stageId'}
     try:
+        file.seek(0)
         data = json.load(file)
+        st.json(data if isinstance(data, list) else {"sample": data})
     except json.JSONDecodeError:
-        st.error("Invalid JSON format. Please check the file.")
+        st.error("Invalid JSON format.")
         return False
-    
-    # Assuming JSON is a list of records
-    missing_keys = required_keys - set(data[0].keys())
-    if missing_keys:
-        st.error(f"JSON is missing one or more required keys: {missing_keys}")
-        st.info("""
-            **Suggestions for Correct File Format (JSON):**
-            - Ensure each record in the JSON contains the following keys: 
-              - `numPartitions`: Number of partitions in the Spark job.
-              - `partitionData`: Data corresponding to each partition.
-              - `stageId`: The ID of the Spark stage.
-            
-            **Example JSON Format:**
-            ```json
-            [
-                {"stageId": 1, "numPartitions": 10, "partitionData": [{"key": "A", "value": 100}]},
-                {"stageId": 2, "numPartitions": 15, "partitionData": [{"key": "B", "value": 200}]}
-            ]
-            ```
-        """)
+    except Exception as e:
+        st.error(f"JSON read error: {e}")
         return False
-    return True
+
+    if isinstance(data, list) and len(data) > 0 and isinstance(data[0], dict):
+        missing_keys = required_keys - set(data[0].keys())
+        if missing_keys:
+            st.error(f"JSON is missing keys: {missing_keys}")
+            return False
+        return True
+    else:
+        st.error("Unexpected JSON structure. Expecting a list of objects.")
+        return False
+
 
 # Text file check
 def check_text(file):
+    try:
+        file.seek(0)  # 👈 Reset file pointer
+        content = file.read().decode("utf-8") if hasattr(file, "read") else str(file)
+    except Exception as e:
+        st.error(f"Text read error: {e}")
+        return False
+
     required_patterns = ['numPartitions', 'partitionData', 'stageId']
-    missing_patterns = [pattern for pattern in required_patterns if pattern not in file.read()]
-    
+    missing_patterns = [pattern for pattern in required_patterns if pattern not in content]
+
     if missing_patterns:
         st.error(f"Text file is missing one or more required patterns: {missing_patterns}")
         st.info("""
             **Suggestions for Correct File Format (Text):**
-            - Ensure the text file contains the following patterns:
-              - `numPartitions`: Number of partitions in the Spark job.
-              - `partitionData`: Data corresponding to each partition.
-              - `stageId`: The ID of the Spark stage.
-            
-            **Example Text Format:**
+            - Text must include:
+              - `numPartitions`
+              - `partitionData`
+              - `stageId`
+            **Example Format:**
             ```
             stageId: 1, numPartitions: 10, partitionData: [{"key": "A", "value": 100}]
             stageId: 2, numPartitions: 15, partitionData: [{"key": "B", "value": 200}]
             ```
         """)
         return False
+
     return True
 
-# Main function to check the format
+# Main file format checker
 def check_file_format(file, file_type):
     if file_type == 'csv':
         return check_csv(file)

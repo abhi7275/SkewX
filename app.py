@@ -38,20 +38,58 @@ def main():
     
     if uploaded_file is not None:
         file_type = uploaded_file.name.split('.')[-1].lower()
-        if not check_file_format(uploaded_file, file_type):
-            st.stop()  
+        # if not check_file_format(uploaded_file, file_type):
+        #     st.stop()  
         try:
             if file_type == 'csv':
                 df = pd.read_csv(uploaded_file)
                 required_cols = {'stageId', 'numPartitions', 'partitionData'}
+                
                 if not required_cols.issubset(df.columns):
-                    st.error(f"CSV is missing one or more required columns: {required_cols}")
+                    missing_cols = required_cols - set(df.columns)
+                    st.error(f"CSV is missing one or more required columns: {missing_cols}")
+                    st.info("""
+                        **Suggestions for Correct File Format (CSV):**
+                        - Ensure the CSV file contains the following columns:
+                        - `stageId`: The ID of the Spark stage.
+                        - `numPartitions`: The number of partitions in the Spark job.
+                        - `partitionData`: Data corresponding to each partition.
+                        
+                        **Example CSV Format:**
+                        ```
+                        stageId,numPartitions,partitionData
+                        1,10,"[100, 200, 150]"
+                        2,15,"[250, 100, 300, 200]"
+                        ```
+                    """)
                     return
+                
                 log_data = df.to_dict(orient='records')
                 partitions = parse_spark_log(log_data)
 
             elif file_type == 'json':
                 log_data = json.load(uploaded_file)
+                
+                if isinstance(log_data, list) and len(log_data) > 0:
+                    required_keys = {'stageId', 'numPartitions', 'partitionData'}
+                    if not all(set(record.keys()).issubset(required_keys) for record in log_data):
+                        st.error("Unexpected JSON structure. Expecting a list of objects with keys: `stageId`, `numPartitions`, `partitionData`.")
+                        st.info("""
+                            **Suggestions for Correct File Format (JSON):**
+                            - Ensure each record in the JSON contains the following keys:
+                            - `stageId`: The ID of the Spark stage.
+                            - `numPartitions`: The number of partitions in the Spark job.
+                            - `partitionData`: Data corresponding to each partition.
+                            
+                            **Example JSON Format:**
+                            ```json
+                            [
+                                {"stageId": 1, "numPartitions": 10, "partitionData": [100, 200, 150]},
+                                {"stageId": 2, "numPartitions": 15, "partitionData": [250, 100, 300, 200]}
+                            ]
+                            ```
+                        """)
+                        return
                 partitions = parse_spark_log(log_data)
 
             elif file_type == 'txt':
@@ -61,6 +99,7 @@ def main():
                 except json.JSONDecodeError:
                     st.error("TXT file is not in valid JSON format.")
                     return
+                
                 partitions = parse_spark_log(log_data)
 
             else:
@@ -69,8 +108,24 @@ def main():
 
             if not partitions:
                 st.warning("No valid partition data found.")
-                return
+                st.info("""
+                        **Possible Reasons:**
+                        - The uploaded file may be missing partition data or it might be in an incorrect format.
+                        - Ensure that the file contains the necessary columns: `stageId`, `numPartitions`, and `partitionData`.
 
+                        **Suggestions to Fix:**
+                        - Check if the `partitionData` column contains valid partition values (e.g., a list of integers).
+                        - Ensure the file is structured correctly and each row represents a valid Spark job stage with the required fields.
+
+                        **Example of Correct Format (CSV, JSON, or TXT):**
+                        ```json
+                        [
+                            {"stageId": 1, "numPartitions": 10, "partitionData": [100, 200, 150]},
+                            {"stageId": 2, "numPartitions": 15, "partitionData": [250, 300, 275]}
+                        ]
+                        ```
+                        """)
+                return
             # Extract all keys for Zipf analysis
             all_keys = [item['key'] for part in partitions for item in part['partition_data']]
             zipf_coefficient, sorted_freq = zipf_detect(all_keys)
