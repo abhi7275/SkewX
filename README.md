@@ -58,3 +58,14 @@ In distributed systems like Spark, **data skew** causes some partitions to be ov
     }
   ]
 }
+
+## 🧪 Sample Log Format (CSV)
+
+stageId,numPartitions,partitionData
+1,3,"[{\"key\": \"apple\", \"count\": 10}, {\"key\": \"banana\", \"count\": 5}]"
+2,4,"[{\"key\": \"orange\", \"count\": 15}, {\"key\": \"grape\", \"count\": 7}]"
+
+## 🧪 Sample Log Format (Text)
+
+stageId: 1, numPartitions: 3, partitionData: [{"key": "apple", "count": 10}, {"key": "banana", "count": 5}]
+stageId: 2, numPartitions: 4, partitionData: [{"key": "orange", "count": 15}, {"key": "grape", "count": 7}]
